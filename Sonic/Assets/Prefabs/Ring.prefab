@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 559347088050034168}
   - component: {fileID: 9043656885422743759}
   m_Layer: 0
-  m_Name: Sonic_MSG_Ring_01
+  m_Name: Ring
   m_TagString: Rings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

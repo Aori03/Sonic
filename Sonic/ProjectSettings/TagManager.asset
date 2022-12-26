@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grounded
   - Environment
+  - Rings
   layers:
   - Default
   - TransparentFX
