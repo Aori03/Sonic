@@ -23,7 +23,9 @@ public class SonicContoller : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-      
+        animator = GetComponent<Animator>();
+
+        scoreText.text = score.ToString();
 
         spawn = GameObject.FindWithTag("Respawn");
         transform.position = spawn.transform.position;
@@ -43,34 +45,48 @@ public class SonicContoller : MonoBehaviour
             Jump();
         }
     }
+
     private void FixedUpdate()
-    {       
+    {
+        // Сохраняем координаты игрока
         Vector3 position = transform.position;
 
-        position.x += Input.GetAxis("Horizontal") * speed;  
+        //Добавляем к сохранённым координатам ввод с клавиатуры
+        position.x += Input.GetAxis(axisName: "Horizontal") * speed;
 
+
+        //Присваеваем игроку новую позицию
         transform.position = position;
-        if (Input.GetAxis( "Horizontal") != 0)
+        if (Input.GetAxis(axisName: "Horizontal") != 0)
         {
-            if (Input.GetAxis( "Horizontal") > 0)
+            if (Input.GetAxis(axisName: "Horizontal") > 0)
             {
                 spriteRenderer.flipX = false;
             }
-            else if (Input.GetAxis( "Horizontal") < 0)
+            else if (Input.GetAxis(axisName: "Horizontal") < 0)
             {
                 spriteRenderer.flipX = true;
             }
-            animator.SetInteger("State", 1);
+            animator.SetInteger(name: "State", value: 1);
         }
         else
         {
-            animator.SetInteger("State", 0);
+            animator.SetInteger(name: "State", value: 0);
         }
     }
+
     private void Jump()
     {
         rigidbody2d.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
     }
+
+    public void AddCoin(int count)
+    {
+        score += count;
+
+        scoreText.text = score.ToString();
+    }
+
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -80,5 +96,4 @@ public class SonicContoller : MonoBehaviour
             // spacePress = false;
         }
     }
-
 }
