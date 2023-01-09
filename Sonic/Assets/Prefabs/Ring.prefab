@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 559347088050034168}
   - component: {fileID: 9043656885422743759}
+  - component: {fileID: 3063102491509573781}
+  - component: {fileID: 7927042767387060307}
   m_Layer: 0
   m_Name: Ring
   m_TagString: Rings
@@ -84,3 +86,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3063102491509573781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533251801780533458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5862d666fde3ac429bee01e214aca30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  audioClip: {fileID: 8300000, guid: 26f9fa6d0a4d55d44b56462832831046, type: 3}
+--- !u!61 &7927042767387060307
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533251801780533458}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.91, y: 1.91}
+    newSize: {x: 1.91, y: 1.91}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.91, y: 1.91}
+  m_EdgeRadius: 0
