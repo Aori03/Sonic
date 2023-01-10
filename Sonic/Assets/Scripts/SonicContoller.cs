@@ -84,7 +84,7 @@ public class SonicContoller : MonoBehaviour
     {
         score += count;
 
-        scoreText.text = score.ToString();
+       
     }
 
 
